@@ -1,3 +1,9 @@
+<a href="pages/dashboard.html">
+
+<button>Open AI Tools</button>
+
+</a>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -5,7 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Invesutama AI Tools</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -44,6 +50,33 @@ copywriting, dan produktivitas digital.
 
 <h2>AI Tools</h2>
 
+<section class="ai-geneator">
+
+<h3>AI Caption Generator</h3>
+
+<p>Masukkan topik konten dan biarkan AI membuat caption untuk Anda.</p>
+
+<input type="text" id="topic" placeholder="Contoh: bisnis kopi">
+
+<select id="platform">
+<option value="Instagram">Instagram</option>
+<option value="TikTok">TikTok</option>
+<option value="YouTube">YouTube</option>
+</select>
+
+<select id="tone">
+<option value="Marketing">Marketing</option>
+<option value="Story">Story</option>
+<option value="Fun">Fun</option>
+<option value="Professional">Professional</option>
+</select>
+
+<button class="btn-primary" onclick="generateCaptionUI()">Generate Caption</button>
+
+<div id="results"></div>
+
+</section>
+
 <div class="feature-grid">
 
 <div class="card">
@@ -78,6 +111,9 @@ copywriting, dan produktivitas digital.
 <p>© 2026 Invesutama AI Tools</p>
 
 </footer>
+
+<script src="ai/caption_generator.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
