@@ -33,3 +33,30 @@ navigator.clipboard.writeText(text);
 alert("Caption copied!");
 
 }
+
+function generateIdeasUI(){
+
+let topic = document.getElementById("idea_topic").value;
+let platform = document.getElementById("idea_platform").value;
+
+let ideas = generateIdeas(topic, platform);
+
+let container = document.getElementById("idea_results");
+
+container.innerHTML = "";
+
+ideas.forEach(idea => {
+
+let card = document.createElement("div");
+card.className = "result-card";
+
+card.innerHTML = `
+<p>${idea}</p>
+<button class="copy-btn" onclick="copyText('${idea}')">Copy</button>
+`;
+
+container.appendChild(card);
+
+});
+
+}
