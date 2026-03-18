@@ -71,9 +71,32 @@ copywriting, dan produktivitas digital.
 <option value="Professional">Professional</option>
 </select>
 
-<button class="btn-primary" onclick="generateCaptionUI()">Generate Caption</button>
+<button class="btn-primary" onclick="generateCaptionUI()">
+Generate Caption</button>
 
 <div id="results"></div>
+
+</section>
+
+<section class="ai-generator">
+
+<h3>AI Content Idea Generator</h3>
+
+<p>Dapatkan 10 ide konten viral untuk media sosial.</p>
+
+<input type="text" id="idea_topic" placeholder="Contoh: bisnis kopi">
+
+<select id="idea_platform">
+<option value="Instagram">Instagram</option>
+<option value="TikTok">TikTok</option>
+<option value="YouTube">YouTube</option>
+</select>
+
+<button class="btn-primary" onclick="generateIdeasUI()">
+Generate Content Ideas
+</button>
+
+<div id="idea_results"></div>
 
 </section>
 
@@ -113,6 +136,7 @@ copywriting, dan produktivitas digital.
 </footer>
 
 <script src="ai/caption_generator.js"></script>
+<script src="ai/content_idea_generator.js"></script>
 <script src="js/main.js"></script>
 
 </body>
