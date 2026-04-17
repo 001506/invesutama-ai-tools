@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copywriting AI - Invesutama AI</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- 🔥 SIDEBAR -->
+  <aside class="sidebar">
+    <h2 class="logo">Invesutama AI</h2>
+    <hr>
+
+    <nav>
+      <a href="index.html" style="color:#fff;">🏠 Dashboard</a>
+      <a href="ai-tools.html" style="color:#fff;">🤖 AI Tools</a>
+      <a href="copywriting.html" style="color:#0f0;">✍️ Copywriting</a>
+      <a href="digital-prompt-store.html" style="color:#fff;">🛒 Digital Store</a>
+      <a href="affiliate.html" style="color:#fff;">💰 Affiliate</a>
+      <a href="blog.html" style="color:#fff;">📚 Blog</a>
+      <a href="profile.html" style="color:#fff;">👤 Profile</a>
+      <a href="#" onclick="logout()" style="color:#ff4d4d;">🚪 Logout</a>
+
+<script>
+function logout() {
+  localStorage.removeItem("isLoggedIn");
+  window.location.href = "../index.html";
+}
+</script>
+
+    </nav>
+  </aside>
+
+  <!-- 💡 MAIN CONTENT -->
+  <main class="main">
+    <p class="badge">🔥 Free Beta Access</p>
+
+    <section class="ai-generator">
+      <div class="card">
+        <h2>✍️ AI Copywriting Generator</h2>
+        <p>Buat teks jualan dengan formula marketing profesional (AIDA & PAS)</p>
+
+    <!-- 🔽 PILIH FORMULA -->
+        <label>Pilih Formula:</label>
+        <select id="formula" style="padding:10px; margin-left:10px;">
+          <option value="aida">AIDA</option>
+          <option value="pas">PAS</option>
+        </select>
+
+    <!-- INPUT -->
+        <input type="text" id="inputText" placeholder="Contoh: Jualan eBook AI untuk pemula">
+
+    <!-- BUTTON -->
+        <button class="btn-primary" onclick="generateCopy()">
+        🚀 Generate Copywriting
+        </button>
+
+    <!-- OUTPUT -->
+        <h3>Hasil Copywriting:</h3>
+        <div class="card" id="output"></div>
+
+      </div>
+    </section>
+  </main>
+
+</div>
+
+<!-- 🔥 SCRIPT -->
+<script>
+
+function generateCopy() {
+  const input = document.getElementById("inputText").value;
+  const formula = document.getElementById("formula").value;
+  const output = document.getElementById("output");
+
+  if (!input) {
+    output.innerHTML = "⚠️ Masukkan deskripsi produk dulu!";
+    return;
+  }
+
+  output.innerHTML = "⏳ Sedang generate...";
+
+  setTimeout(() => {
+
+    if (formula === "aida") {
+      output.innerHTML = `
+        🔥 AIDA Copywriting:
+
+        [Attention]
+        Mau ${input} dengan cara yang lebih mudah?
+
+        [Interest]
+        Sekarang kamu bisa membuat konten, jualan, dan menghasilkan uang hanya dengan bantuan AI.
+
+        [Desire]
+        Bayangkan kamu bisa membuat copywriting profesional tanpa skill khusus, bahkan sebagai pemula.
+
+        [Action]
+        👉 Mulai sekarang dan rasakan hasilnya!
+      `;
+    }
+
+    if (formula === "pas") {
+      output.innerHTML = `
+        🔥 PAS Copywriting:
+
+        [Problem]
+        Banyak orang kesulitan ${input} karena tidak tahu cara yang efektif.
+
+        [Agitate]
+        Akibatnya, waktu terbuang, hasil tidak maksimal, dan peluang hilang.
+
+        [Solution]
+        Dengan solusi ini, kamu bisa melakukannya lebih cepat, mudah, dan menghasilkan!
+      `;
+    }
+
+  }, 1500);
+}
+
+</script>
+
+<script>
+if (localStorage.getItem("isLoggedIn") !== "true") {
+  alert("Silakan login dulu!");
+  window.location.href = "../login.html";
+}
+</script>
+
+</body>
+</html>
+
