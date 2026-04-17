@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tools - Invesutama AI</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- 🔥 SIDEBAR -->
+  <aside class="sidebar">
+    <h2 class="logo">Invesutama AI</h2>
+    <hr>
+
+    <nav>
+      <a href="index.html" style="color:#fff;">🏠 Dashboard</a>
+      <a href="ai-tools.html" style="color:#0f0;">🤖 AI Tools</a>
+      <a href="copywriting.html" style="color:#fff;">✍️ Copywriting</a>
+      <a href="digital-prompt-store.html" style="color:#fff;">🛒 Digital Store</a>
+      <a href="affiliate.html" style="color:#fff;">💰 Affiliate</a>
+      <a href="blog.html" style="color:#fff;">📚 Blog</a>
+      <a href="profile.html" style="color:#fff;">👤 Profile</a>
+      <a href="#" onclick="logout()" style="color:#ff4d4d;">🚪 Logout</a>
+
+<script>
+function logout() {
+  localStorage.removeItem("isLoggedIn");
+  window.location.href = "../index.html";
+}
+</script>
+
+    </nav>
+    
+  </aside>
+
+  <!-- 💡 MAIN CONTENT -->
+  <main class="main">
+    <p class="badge">🔥 Free Beta Access</p>
+
+    <section class="ai-generator">
+      <div class="card">
+        <h2>🤖 AI Text Generator</h2>
+        <p>Gunakan AI untuk membuat konten, artikel, atau ide bisnis.</p>
+
+    <!-- INPUT -->
+        <input type="text" id="prompt" placeholder="Prompt... (contoh: Buatkan ide konten TikTok tentang bisnis online)">
+
+    <!-- BUTTON -->
+        <button class="btn-primary" onclick="generateText()">
+        🚀 Generate</button>
+
+    <!-- OUTPUT -->
+        <h3>Hasil:</h3>
+        <div class="card" id="result"></div>
+      </div>
+    </section>
+    
+  </main>
+
+</div>
+
+<script>
+
+function generateText() {
+  const prompt = document.getElementById("prompt").value;
+  const resultDiv = document.getElementById("result");
+
+  if (!prompt) {
+    resultDiv.innerHTML = "⚠️ Masukkan prompt dulu!";
+    return;
+  }
+
+  // 🔥 SIMULASI AI (sementara)
+  resultDiv.innerHTML = "⏳ Sedang generate...";
+
+  setTimeout(() => {
+    resultDiv.innerHTML = `
+      💡 Hasil AI:
+
+      Berdasarkan prompt: "${prompt}"
+
+      Berikut ide yang bisa kamu gunakan:
+
+      1. Buat konten edukasi singkat
+      2. Gunakan storytelling agar menarik
+      3. Tambahkan call-to-action untuk engagement
+      4. Konsisten posting untuk hasil maksimal
+
+      🚀 Ini adalah hasil simulasi AI.
+    `;
+  }, 1500);
+}
+</script>
+
+<script>
+if (localStorage.getItem("isLoggedIn") !== "true") {
+  alert("Silakan login dulu!");
+  window.location.href = "../login.html";
+}
+</script>
+
+</body>
+</html>
+

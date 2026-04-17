@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Invesutama AI</title>
+</head>
+
+<body style="font-family:Arial; text-align:center; padding:50px;">
+
+<h1>Login</h1>
+
+<input type="text" id="username" placeholder="Username"><br><br>
+<input type="password" id="password" placeholder="Password"><br><br>
+
+<button onclick="login()">Login</button>
+
+<p>Belum punya akun? <a href="register.html">Daftar</a></p>
+
+<script>
+function login() {
+  const user = document.getElementById("username").value;
+  const pass = document.getElementById("password").value;
+
+  const savedUser = JSON.parse(localStorage.getItem("user"));
+
+  if (!savedUser) {
+    alert("Akun belum terdaftar!");
+    return;
+  }
+
+  if (user === savedUser.username && pass === savedUser.password) {
+    localStorage.setItem("isLoggedIn", "true");
+    window.location.href = "dashboard/index.html";
+  } else {
+    alert("Username atau password salah!");
+  }
+}
+</script>
+
+</body>
+</html>
