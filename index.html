@@ -1,1 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invesutama AI - Platform AI untuk Produktivitas & Penghasilan</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.gooleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
 
+<body>
+
+<!-- 🔹 NAVBAR -->
+<header class="navbar">
+  <div class="logo">Invesutama AI</div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <a href="contact.html">Contact</a>
+    <a href="#features">Fitur</a>
+    <a href="blog/index.html">Blog</a>
+    <a href="store/prompt-store.html">Digital Store</a>
+    <a href="affiliate/index.html">Affiliate</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+</header>
+
+<!-- 🔥 HERO SECTION -->
+<section class="hero">
+  <h1>Buat Konten, Bangun Penghasilan, dengan AI</h1>
+  <p>Gunakan AI Tools untuk menulis artikel, copywriting, dan menjual produk digital dengan mudah.</p>
+  
+  <br>
+  <a href="register.html">
+    <button class="btn-primary">Mulai Gratis</button>
+  </a>
+</section>
+
+<!-- 💡 FEATURES -->
+<section id="features">
+  <h2>Semua yang Kamu Butuhkan dalam Satu Platform</h2>
+
+  <div class="feature-grid">
+    
+    <div class="card">
+      <h3>AI Tools</h3>
+      <p>Generate artikel, ide konten, dan tulisan otomatis.</p>
+    </div>
+
+    <div class="card">
+      <h3>AI Copywriting</h3>
+      <p>Buat teks jualan pakai formula AIDA & PAS.</p>
+    </div>
+
+    <div class="card">
+      <h3>Prompt Store</h3>
+      <p>Jual & beli template prompt AI siap pakai.</p>
+    </div>
+
+    <div class="card">
+      <h3>Affiliate</h3>
+      <p>Dapatkan penghasilan dari rekomendasi produk.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="ai-generator">
+  <div class="container">
+    <h2>Coba Gratis</h2>
+      <p>Daftar untuk melihat dashboard</p>
+
+    <div class="card">
+    <h3>AI Caption Generator</h3>
+      <p>Masukkan topik konten dan biarkan AI mebuat caption untuk Anda.</p>
+
+        <input type="text" id="topic" placeholder="Contoh: bisnis kopi">
+        <select id="platform">
+          <option value="Instagram">Instagram</option>
+          <option value="Tiktok">TikTok</option>
+          <option value="YouTube">YouTube</option>
+        </select>
+
+        <select id="tone">
+          <option value="Marketing">Marketing</option>
+          <option value="Story">Story</option>
+          <option value="Fun">Fun</option>
+          <option value="Professional">Professional</option>
+        </select>
+      <button class="btn-primary" onclick="generateCaptionUI()">🚀 Generate Caption</button>
+      <div id="results"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 🚀 HOW IT WORKS -->
+<section class="container">
+  <h2>Cara Kerja</h2>
+
+  <div class="card">
+    <p>1. Daftar akun gratis</p>
+    <p>2. Gunakan AI Tools</p>
+    <p>3. Buat konten / jual produk</p>
+    <p>4. Hasilkan uang 💰</p>
+  </div>
+</section>
+
+<!-- 🔥 CTA -->
+<section class="cta">
+  <h2>Mulai Sekarang, Gratis</h2>
+  <p>Tidak perlu skill coding. Tidak perlu modal besar.</p>
+
+  <br>
+  <a href="register.html">
+    <button class="btn-primary">Daftar Sekarang</button>
+  </a>
+</section>
+
+<!-- 📌 FOOTER -->
+<footer>
+  <p>© 2026 Invesutama AI. All Rights Reserved.</p>
+</footer>
+
+<script src="ai/caption_generator.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
