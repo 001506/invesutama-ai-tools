@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Invesutama AI - Platform AI untuk Produktivitas & Penghasilan</title>
+  <title>Invesutama Academy - Edukasi AI, Teknologi & Pengembangan Diri untuk semua kalangan.</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://fonts.gooleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -12,9 +12,10 @@
 
 <!-- 🔹 NAVBAR -->
 <header class="navbar">
-  <div class="logo">Invesutama AI</div>
+  <div class="container nav-wrapper">
+    <h1 class="logo">Invesutama</h1>
 
-  <nav>
+  <div class="menu" id="menu">
     <a href="#">Home</a>
     <a href="/about.html">About</a>
     <a href="/privacy-policy.html">Privacy Policy</a>
@@ -24,19 +25,57 @@
     <a href="store/prompt-store.html">Digital Store</a>
     <a href="affiliate/index.html">Affiliate</a>
     <a href="login.html">Login</a>
-  </nav>
+  </div>
 
+   <div class="hamburger" onclick="toggleMenu()">
+      ☰
+    </div>
+  </div>
 </header>
 
 <!-- 🔥 HERO SECTION -->
 <section class="hero">
-  <h1>Buat Konten, Bangun Penghasilan, dengan AI</h1>
-  <p>Gunakan AI Tools untuk menulis artikel, copywriting, dan menjual produk digital dengan mudah.</p>
-  
-  <br>
-  <a href="register.html">
-    <button class="btn-primary">Mulai Gratis</button>
-  </a>
+  <div class="container fade">
+    <h1>Belajar AI & Teknologi dari Nol</h1>
+    <p>Bangun skill masa depan & mulai hasilkan uang</p>
+
+    <br>
+    <a href="register.html">
+      <button class="btn">Mulai Gratis</button>
+    </a>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="section">
+  <div class="container fade">
+    <h2>Masalah Umum</h2>
+    <div class="grid grid-3">
+      <div class="card">Bingung mulai</div>
+      <div class="card">Materi rumit</div>
+      <div class="card">Tidak menghasilkan</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUSI -->
+<section class="section">
+  <div class="container fade">
+    <h2>Solusi Kami</h2>
+    <p>Belajar AI dengan cara praktis & mudah dipahami</p>
+  </div>
+</section>
+
+<!-- BENEFIT -->
+<section class="section">
+  <div class="container fade">
+    <h2>Keuntungan</h2>
+    <div class="grid grid-3">
+      <div class="card">Pemula Friendly</div>
+      <div class="card">Langsung Praktik</div>
+      <div class="card">Berpotensi Menghasilkan</div>
+    </div>
+  </div>
 </section>
 
 <!-- 💡 FEATURES -->
@@ -77,7 +116,7 @@
     <h3>AI Caption Generator</h3>
       <p>Masukkan topik konten dan biarkan AI mebuat caption untuk Anda.</p>
 
-        <input type="text" id="topic" placeholder="Contoh: bisnis kopi">
+        <textarea id="topic" placeholder="Contoh: bisnis kopi"></textarea>
         <select id="platform">
           <option value="Instagram">Instagram</option>
           <option value="Tiktok">TikTok</option>
@@ -109,14 +148,15 @@
 </section>
 
 <!-- 🔥 CTA -->
-<section class="cta">
-  <h2>Mulai Sekarang, Gratis</h2>
-  <p>Tidak perlu skill coding. Tidak perlu modal besar.</p>
+<section class="section">
+  <div class="container fade">
+    <h2>Mulai Sekarang</h2>
 
-  <br>
-  <a href="register.html">
-    <button class="btn-primary">Daftar Sekarang</button>
-  </a>
+    <br>
+    <a href="register.html">
+      <button class="btn">Gabung Sekarang</button>
+    </a>
+  </div>
 </section>
 
 <!-- 📌 FOOTER -->
@@ -124,6 +164,8 @@
   <p>© 2026 Invesutama AI. All Rights Reserved.</p>
 </footer>
 
+<script src="js/toggle.js"></script>
+<script src="js/fade.js"></script>
 <script src="ai/caption_generator.js"></script>
 <script src="js/main.js"></script>
 
